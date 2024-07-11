@@ -1,0 +1,1197 @@
+{% include 'employee_header.html' %}
+
+    <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <!-- <h2>Classtime Table</h2> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">all class</li>
+                            <li data-tsfilter="crossfit">crossfit</li>
+                            <li data-tsfilter="lunge">lunge ball</li>
+                            <li data-tsfilter="ppsr">ppsr</li>
+                            <li data-tsfilter="walls">walls</li>
+                            <li data-tsfilter="candy">candy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="table">
+							<table align="center" border="2" class="table" style="width: 1000px">
+								<form method="post">
+							<h2 align="center" style="color: white;">Workout</h2>
+							<thead>
+								<tr>
+									<th style="color: white;">Workouts</th>
+                                    
+								</tr>
+							</thead>
+                            <tbody>
+                                {% if qa.output == "Pilates focuses on core strength, flexibility, and body awareness. It involves controlled movements and specific breathing patterns. Equipment: Pilates reformer, Pilates mat, resistance bands." %}
+                                <tr>
+                                    <td colspan="2">
+                                        <style>
+                                            body {
+                                                font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        
+                                            .container {
+                                                width: 80%;
+                                                margin: 20px auto;
+                                                padding: 20px;
+                                                border-radius: 10px;
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                        
+                                            h1 {
+                                                text-align: center;
+                                                color: #007bff;
+                                            }
+                                        
+                                            h2 {
+                                                color: white;
+                                                font-weight: bold; /* Make h2 bold */
+                                            }
+                            
+                                            p {
+                                                color: white;
+                                            }
+                                        
+                                            .day {
+                                                margin-bottom: 30px;
+                                            }
+                                        
+                                            .exercise {
+                                                margin-bottom: 15px;
+                                            }
+                                        
+                                            .exercise h3 {
+                                                color: #007bff;
+                                            }
+                                        
+                                            .exercise ul {
+                                                list-style-type: disc;
+                                                margin-left: 20px;
+                                                color: white;
+                                            }
+                                        </style>
+                                        
+                                        <div class="container">
+                                            <h1>Pilates Workout Plan</h1>
+                                            <p style="color: white;">{{ qa.output }}</p>
+                                            <!-- Day 1: Pilates Mat Workout -->
+                                            <div class="day">
+                                                <h2>Day 1: Pilates Mat Workout</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins gentle movements</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Mat Exercises</h3>
+                                                    <p>2 sets of 10-12 reps each</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 2: Pilates Reformer or Equipment Workout -->
+                                            <div class="day">
+                                                <h2>Day 2: Pilates Reformer or Equipment Workout</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins on equipment</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Equipment Exercises</h3>
+                                                    <p>2 sets of 10-12 reps each</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching with equipment support</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 3: Pilates Ring Workout -->
+                                            <div class="day">
+                                                <h2>Day 3: Pilates Ring Workout</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Ring Exercises</h3>
+                                                    <p>2 sets of 10-12 reps each</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching with ring support</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 4: Pilates Ball Workout -->
+                                            <div class="day">
+                                                <h2>Day 4: Pilates Ball Workout</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins gentle movements</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Ball Exercises</h3>
+                                                    <p>2 sets of 10-12 reps each</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching, using ball for support</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 5: Pilates Barre Workout -->
+                                            <div class="day">
+                                                <h2>Day 5: Pilates Barre Workout</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Barre Exercises</h3>
+                                                    <p>2 sets of 10-12 reps each</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching, focusing on legs and core</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 6: Pilates Chair Workout -->
+                                            <div class="day">
+                                                <h2>Day 6: Pilates Chair Workout</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                                <p>5 mins gentle movements</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Chair Exercises</h3>
+                                                    <p>2 sets of 10-12 reps each</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching, using chair for support</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 7: Pilates Fusion Workout -->
+                                            <div class="day">
+                                                <h2>Day 7: Pilates Fusion Workout</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Fusion Exercises</h3>
+                                                    <p>Customized workout combining previous exercises</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching, focusing on tight areas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        
+                                    </td>
+                                </tr>
+                                {% endif %} 
+
+                                {% if qa.output == "The overweight gym plan focuses on a combination of cardiovascular exercises and strength training to promote weight loss and improve overall fitness. Cardio exercises such as treadmill walking, stationary bike cycling, and rowing are recommended for burning calories and improving heart health. Strength training exercises should target major muscle groups and include exercises like leg presses, chest presses, lat pulldowns, and bicep curls. It is important to start with lighter weights and gradually increase intensity as strength improves. Aim for 3-4 days of gym workouts per week with rest days in between for recovery." %}
+                                <tr>
+                                    <td colspan="2">
+                                        <style>
+                                            body {
+                                                font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        
+                                            .container {
+                                                width: 80%;
+                                                margin: 20px auto;
+                                                padding: 20px;
+                                                border-radius: 10px;
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                        
+                                            h1 {
+                                                text-align: center;
+                                                color: #007bff;
+                                            }
+                                        
+                                            h2 {
+                                                color: white;
+                                                font-weight: bold; /* Make h2 bold */
+                                            }
+                            
+                                            p {
+                                                color: white;
+                                            }
+                                        
+                                            .day {
+                                                margin-bottom: 30px;
+                                            }
+                                        
+                                            .exercise {
+                                                margin-bottom: 15px;
+                                            }
+                                        
+                                            .exercise h3 {
+                                                color: #007bff;
+                                            }
+                                        
+                                            .exercise ul {
+                                                list-style-type: disc;
+                                                margin-left: 20px;
+                                                color: white;
+                                            }
+                                        </style>
+                                        
+                                        <div class="container">
+                                            <h1>Overweight Gym Plan</h1>
+                                            <p style="color: white;">{{ res4 }}</p>
+                                            <div class="day">
+                                                <h2>Day 1: Full Body Strength Training</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Strength Training</h3>
+                                                    <ul>
+                                                        <li>3 sets of squats</li>
+                                                        <li>3 sets of lunges</li>
+                                                        <li>3 sets of push-ups</li>
+                                                        <li>3 sets of rows</li>
+                                                        <li>3 sets of planks</li>
+                                                    </ul>
+                                                    <p>(10-12 reps each)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="day">
+                                                <h2>Day 2: Cardio Interval Training</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins dynamic stretches</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Interval Training</h3>
+                                                    <p>20-30 mins (1 min high-intensity, 1 min moderate-intensity)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins light cardio, stretching</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="day">
+                                                <h2>Day 3: Active Recovery</h2>
+                                                <div class="exercise">
+                                                    <h3>Light activity</h3>
+                                                    <p>30-45 mins (walking, yoga, swimming)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Gentle stretching, mobility exercises</h3>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="day">
+                                                <h2>Day 4: Upper Body Strength Training</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Upper Body Workout</h3>
+                                                    <p>3 sets of upper body exercises (10-12 reps each)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins upper body stretches</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="day">
+                                                <h2>Day 5: Cardio and Core</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins dynamic stretches</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cardio</h3>
+                                                    <p>30-45 mins (running, cycling, dancing)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Core Workout</h3>
+                                                    <p>3 sets of core exercises (10-15 reps each)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins core stretches</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="day">
+                                                <h2>Day 6: Lower Body Strength Training</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                       </div>
+                                                <div class="exercise">
+                                                    <h3>Lower Body Workout</h3>
+                                                    <p>3 sets of lower body exercises (10-12 reps each)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins lower body stretches</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="day">
+                                                <h2>Day 7: Active Rest or Flexibility</h2>
+                                                <div class="exercise">
+                                                    <h3>Active rest</h3>
+                                                    <p>walking, light yoga</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Flexibility</h3>
+                                                    <p>30-45 mins stretching routine</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                {% endif %}
+
+                                {% if qa.output == "Cardiovascular exercises aim to elevate your heart rate and improve endurance. Examples include running, cycling, swimming, and jumping rope. Equipment: Treadmill, stationary bike, elliptical machine, jump rope." %}
+                                <tr>
+                                    <td colspan="2">
+                                        <style>
+                                            body {
+                                                font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        
+                                            .container {
+                                                width: 80%;
+                                                margin: 20px auto;
+                                                padding: 20px;
+                                                border-radius: 10px;
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                        
+                                            h1 {
+                                                text-align: center;
+                                                color: #007bff;
+                                            }
+                                        
+                                            h2 {
+                                                color: white;
+                                                font-weight: bold; /* Make h2 bold */
+                                            }
+                            
+                                            p {
+                                                color: white;
+                                            }
+                                        
+                                            .day {
+                                                margin-bottom: 30px;
+                                            }
+                                        
+                                            .exercise {
+                                                margin-bottom: 15px;
+                                            }
+                                        
+                                            .exercise h3 {
+                                                color: #007bff;
+                                            }
+                                        
+                                            .exercise ul {
+                                                list-style-type: disc;
+                                                margin-left: 20px;
+                                                color: white;
+                                            }
+                                        </style>
+                                        
+                                        <div class="container">
+                                            <h1>Cardiovascular Exercises Plan</h1>
+                                            <p style="color: white;">{{ res4 }}</p>
+                                            <!-- Day 1: HIIT -->
+                                            <div class="day">
+                                                <h2>Day 1: HIIT</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>HIIT</h3>
+                                                    <p>20 mins (30 secs high-intensity, 30 secs rest)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 2: Jump Rope -->
+                                            <div class="day">
+                                                <h2>Day 2: Jump Rope</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins dynamic stretches</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Jump Rope</h3>
+                                                    <p>10 mins varied jumps</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins static stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 3: Circuit Training -->
+                                            <div class="day">
+                                                <h2>Day 3: Circuit Training</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins jogging, dynamic stretches</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Circuit</h3>
+                                                    <p>3 rounds (45 secs exercise, 15 secs rest)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins gentle stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 4: Cardio Dance -->
+                                            <div class="day">
+                                                <h2>Day 4: Cardio Dance</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Dance Workout</h3>
+                                                    <p>30-45 mins</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins slow dancing, stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 5: Stair Climbing -->
+                                            <div class="day">
+                                                <h2>Day 5: Stair Climbing</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins walk/jog</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Stair Climbing</h3>
+                                                    <p>20-30 mins</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins leg, back stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 6: Bodyweight Cardio -->
+                                            <div class="day">
+                                                <h2>Day 6: Bodyweight Cardio</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins dynamic stretches</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Bodyweight Cardio</h3>
+                                                    <p>3 rounds (1 min exercise, 15 secs rest)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins full-body stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 7: Active Recovery -->
+                                            <div class="day">
+                                                <h2>Day 7: Active Recovery</h2>
+                                                <div class="exercise">
+                                                    <h3>Light activity</h3>
+                                                    <p>30-45 mins (walking, yoga, swimming)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>Gentle stretching, mobility exercises</p>
+                                                </div>
+                                            </div>
+                                    
+                                        </div>
+                                    
+                                    </td>
+                                </tr>
+                                {% endif %}
+                            
+                                
+                                {% if qa.output == "High-Intensity Interval Training alternates between short bursts of intense exercise and brief rest periods to maximize calorie burn and improve cardiovascular fitness. Examples include burpees, sprinting, and jump squats. Equipment: None (bodyweight exercises), or optional weights for added resistance." %}
+                                <tr>
+                                    <td colspan="2">
+                                        <style>
+                                            body {
+                                                font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        
+                                            .container {
+                                                width: 80%;
+                                                margin: 20px auto;
+                                                padding: 20px;
+                                                border-radius: 10px;
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                        
+                                            h1 {
+                                                text-align: center;
+                                                color: #007bff;
+                                            }
+                                        
+                                            h2 {
+                                                color: white;
+                                                font-weight: bold; /* Make h2 bold */
+                                            }
+                            
+                                            p {
+                                                color: white;
+                                            }
+                                        
+                                            .day {
+                                                margin-bottom: 30px;
+                                            }
+                                        
+                                            .exercise {
+                                                margin-bottom: 15px;
+                                            }
+                                        
+                                            .exercise h3 {
+                                                color: #007bff;
+                                            }
+                                        
+                                            .exercise ul {
+                                                list-style-type: disc;
+                                                margin-left: 20px;
+                                                color: white;
+                                            }
+                                        </style>
+                                        
+                                        <div class="container">
+                                            <h1>HIIT Workout Plan</h1>
+                                            <p style="color: white;">{{ res4 }}</p>
+                                            <!-- Day 1: Full Body HIIT -->
+                                            <div class="day">
+                                                <h2>Day 1: Full Body HIIT</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>HIIT Workout</h3>
+                                                    <p>30 secs high-intensity exercise, 30 secs rest, repeat 20 mins</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins stretching</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 2: Cardio HIIT -->
+                                            <div class="day">
+                                                <h2>Day 2: Cardio HIIT</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins dynamic stretches</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>HIIT Workout</h3>
+                                                    <p>1 min high-intensity cardio, 1 min active recovery, repeat 20-30 mins</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins light cardio, stretching</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 3: Lower Body HIIT -->
+                                            <div class="day">
+                                                <h2>Day 3: Lower Body HIIT</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>HIIT Workout</h3>
+                                                    <p>45 secs lower body exercises, 15 secs rest, repeat 20-25 mins</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins leg, glute stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 4: Upper Body HIIT -->
+                                            <div class="day">
+                                                <h2>Day 4: Upper Body HIIT</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>HIIT Workout</h3>
+                                                    <p>45 secs upper body exercises, 15 secs rest, repeat 20-25 mins</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins upper body stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 5: Core HIIT -->
+                                            <div class="day">
+                                                <h2>Day 5: Core HIIT</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>HIIT Workout</h3>
+                                                    <p>45 secs core exercises, 15 secs rest, repeat 20-25 mins</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins core stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 6: Total Body Tabata -->
+                                            <div class="day">
+                                                <h2>Day 6: Total Body Tabata</h2>
+                                                <div class="exercise">
+                                                    <h3>Warm up</h3>
+                                                    <p>5 mins light cardio</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Tabata Workout</h3>
+                                                    <p>20 secs high-intensity, 10 secs rest, repeat 4 mins per exercise, 4-5 exercises</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Cool down</h3>
+                                                    <p>5 mins full-body stretches</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 7: Active Recovery or Rest -->
+                                            <div class="day">
+                                                <h2>Day 7: Active Recovery or Rest</h2>
+                                                <div class="exercise">
+                                                    <h3>Light activity</h3>
+                                                    <p>30-45 mins (walking, yoga, swimming)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Stretching</h3>
+                                                    <p>Gentle stretching, mobility exercises</p>
+                                                </div>
+                                            </div>
+                                    
+                                        </div>
+                                    
+                                    </td>
+                                </tr>
+                                {% endif %}
+                            
+
+                                {% if qa.output == "Gym workouts typically include a combination of cardio and strength exercises using various gym equipment. Examples include treadmill running, stationary bike cycling, weightlifting, and using machines such as the leg press, chest press, and lat pulldown. Equipment: Treadmill, stationary bike, rowing machine, elliptical machine, leg press machine, chest press machine, lat pulldown machine, free weights, resistance machines." %}
+                                <tr>
+                                    <td colspan="2">
+                                        <style>
+                                            body {
+                                                font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        
+                                            .container {
+                                                width: 80%;
+                                                margin: 20px auto;
+                                                padding: 20px;
+                                                border-radius: 10px;
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                        
+                                            h1 {
+                                                text-align: center;
+                                                color: #007bff;
+                                            }
+                                        
+                                            h2 {
+                                                color: white;
+                                                font-weight: bold; /* Make h2 bold */
+                                            }
+                            
+                                            p {
+                                                color: white;
+                                            }
+                                        
+                                            .day {
+                                                margin-bottom: 30px;
+                                            }
+                                        
+                                            .exercise {
+                                                margin-bottom: 15px;
+                                            }
+                                        
+                                            .exercise h3 {
+                                                color: #007bff;
+                                            }
+                                        
+                                            .exercise ul {
+                                                list-style-type: disc;
+                                                margin-left: 20px;
+                                                color: white;
+                                            }
+                                        </style>
+                                        
+                                        <div class="container">
+                                            <h1>Gym Workout Plan</h1>
+                                            <p style="color: white;">{{ res4 }}</p>
+                                            <!-- Day 1: Chest and Triceps -->
+                                            <div class="day">
+                                                <h2>Day 1: Chest and Triceps</h2>
+                                                <div class="exercise">
+                                                    <h3>Bench Press</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Incline Dumbbell Press</h3>
+                                                    <p>4x10-12</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Tricep Dips</h3>
+                                                    <p>3x10-12</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 2: Back and Biceps -->
+                                            <div class="day">
+                                                <h2>Day 2: Back and Biceps</h2>
+                                                <div class="exercise">
+                                                    <h3>Deadlifts</h3>
+                                                    <p>4x6-8</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Pull-Ups</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Barbell Bicep Curls</h3>
+                                                    <p>3x10-12</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 3: Shoulders and Abs -->
+                                            <div class="day">
+                                                <h2>Day 3: Shoulders and Abs</h2>
+                                                <div class="exercise">
+                                                    <h3>Military Press</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Lateral Raises</h3>
+                                                    <p>4x10-12</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Russian Twists</h3>
+                                                    <p>3x15-20</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Day 4: Legs -->
+                                    <div class="day">
+                                        <h2>Day 4: Legs</h2>
+                                        <div class="exercise">
+                                            <h3>Squats</h3>
+                                            <p>4x8-10</p>
+                                        </div>
+                                        <div class="exercise">
+                                            <h3>Leg Press</h3>
+                                            <p>4x10-12</p>
+                                        </div>
+                                        <div class="exercise">
+                                            <h3>Lunges</h3>
+                                            <p>3x12-15</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Day 5: Chest and Triceps (Variation) -->
+                                    <div class="day">
+                                        <h2>Day 5: Chest and Triceps (Variation)</h2>
+                                        <div class="exercise">
+                                            <h3>Incline Bench Press</h3>
+                                            <p>4x8-10</p>
+                                        </div>
+                                        <div class="exercise">
+                                            <h3>Dumbbell Flyes</h3>
+                                            <p>4x10-12</p>
+                                        </div>
+                                        <div class="exercise">
+                                            <h3>Skull Crushers</h3>
+                                            <p>3x10-12</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Day 6: Back and Biceps (Variation) -->
+                                    <div class="day">
+                                        <h2>Day 6: Back and Biceps (Variation)</h2>
+                                        <div class="exercise">
+                                            <h3>T-Bar Rows</h3>
+                                            <p>4x8-10</p>
+                                        </div>
+                                        <div class="exercise">
+                                            <h3>Seated Cable Rows</h3>
+                                            <p>4x10-12</p>
+                                        </div>
+                                        <div class="exercise">
+                                            <h3>Concentration Curls</h3>
+                                            <p>3x10-12</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Day 7: Active Rest or Full Body Workout (Light) -->
+                                    <div class="day">
+                                        <h2>Day 7: Active Rest or Full Body Workout (Light)</h2>
+                                        <p>Light cardio, stretching, or yoga for active recovery.</p>
+                                    </div>
+                                    
+                                    
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endif %}
+
+
+                                {% if qa.output == "Strength training involves resistance exercises to build muscle strength and endurance. Examples include weightlifting, bodyweight exercises, and resistance band workouts. Equipment: Dumbbells, barbells, kettlebells, resistance bands." %}
+                                <tr>
+                                    <td colspan="2">
+                                        <style>
+                                            body {
+                                                font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        
+                                            .container {
+                                                width: 80%;
+                                                margin: 20px auto;
+                                                padding: 20px;
+                                                border-radius: 10px;
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                        
+                                            h1 {
+                                                text-align: center;
+                                                color: #007bff;
+                                            }
+                                        
+                                            h2 {
+                                                color: white;
+                                                font-weight: bold; /* Make h2 bold */
+                                            }
+                            
+                                            p {
+                                                color: white;
+                                            }
+                                        
+                                            .day {
+                                                margin-bottom: 30px;
+                                            }
+                                        
+                                            .exercise {
+                                                margin-bottom: 15px;
+                                            }
+                                        
+                                            .exercise h3 {
+                                                color: #007bff;
+                                            }
+                                        
+                                            .exercise ul {
+                                                list-style-type: disc;
+                                                margin-left: 20px;
+                                                color: white;
+                                            }
+                                        </style>
+                                        
+                                        <div class="container">
+                                            <h1>Strength Training Plan</h1>
+                                            <p style="color: white;">{{ res4 }}</p>
+                                            
+                                            <!-- Day 1: Upper Body Push -->
+                                            <div class="day">
+                                                <h2>Day 1: Upper Body Push</h2>
+                                                <div class="exercise">
+                                                    <h3>Bench Press</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Overhead Shoulder Press</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Tricep Dips</h3>
+                                                    <p>3x10-12</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Day 2: Lower Body -->
+                                            <div class="day">
+                                                <h2>Day 2: Lower Body</h2>
+                                                <div class="exercise">
+                                                    <h3>Squats</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Deadlifts</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Lunges</h3>
+                                                    <p>3x10-12 (each leg)</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Day 3: Rest or Active Recovery -->
+                                            <div class="day">
+                                                <h2>Day 3: Rest or Active Recovery</h2>
+                                            </div>
+                                        
+                                            <!-- Day 4: Upper Body Pull -->
+                                            <div class="day">
+                                                <h2>Day 4: Upper Body Pull</h2>
+                                                <div class="exercise">
+                                                    <h3>Pull-Ups or Lat Pulldowns</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Barbell Rows</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Bicep Curls</h3>
+                                                    <p>3x10-12</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Day 5: Core and Stability -->
+                                            <div class="day">
+                                                <h2>Day 5: Core and Stability</h2>
+                                                <div class="exercise">
+                                                    <h3>Planks</h3>
+                                                    <p>4x30-60s</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Russian Twists</h3>
+                                                    <p>3x15-20 (each side)</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Stability Ball Rollouts</h3>
+                                                    <p>3x10-12</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Day 6: Full Body -->
+                                            <div class="day">
+                                                <h2>Day 6: Full Body</h2>
+                                                <div class="exercise">
+                                                    <h3>Squat to Overhead Press</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Deadlift to Bent Over Row</h3>
+                                                    <p>4x8-10</p>
+                                                </div>
+                                                <div class="exercise">
+                                                    <h3>Push-Ups</h3>
+                                                    <p>3xmax reps</p>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Day 7: Active Rest or Flexibility -->
+                                            <div class="day">
+                                                <h2>Day 7: Active Rest or Flexibility</h2>
+                                                <p>Light activity: 30-45 mins (walking, swimming)</p>
+                                                <p>Stretching, mobility exercises.</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endif %}
+                            
+
+                                {% if qa.output == "Yoga combines physical postures, breathing exercises, and meditation to improve flexibility, strength, and mental well-being. Equipment: Yoga mat, yoga blocks, yoga strap." %}
+                                <tr>
+                                    <td colspan="2">
+                                        <style>
+                                            body {
+                                                font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                padding: 0;
+                                            }
+                                        
+                                            .container {
+                                                width: 80%;
+                                                margin: 20px auto;
+                                                padding: 20px;
+                                                border-radius: 10px;
+                                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                        
+                                            h1 {
+                                                text-align: center;
+                                                color: #007bff;
+                                            }
+                                        
+                                            h2 {
+                                                color: #007bff;
+                                                font-weight: bold; /* Make h2 bold */
+                                            }
+                            
+                                            p {
+                                                color: white;
+                                            }
+                                        
+                                            .day {
+                                                margin-bottom: 30px;
+                                            }
+                                        
+                                            .exercise {
+                                                margin-bottom: 15px;
+                                            }
+                                        
+                                            .exercise h3 {
+                                                color: #007bff;
+                                            }
+                                        
+                                            .exercise ul {
+                                                list-style-type: disc;
+                                                margin-left: 20px;
+                                                color: white;
+                                            }
+                                        </style>
+                                        
+                                        <div class="container">
+                                            <h1>Yoga Practice Schedule</h1>
+                                            <p style="color: white;">{{ res4 }}</p>
+                                            
+                                            <!-- Day 1: Foundations -->
+                                            <div class="day">
+                                                <h2>Day 1: Foundations</h2>
+                                                <p>Warm up with Sun Salutations</p>
+                                                <p>Standing Poses and Seated Poses</p>
+                                                <p>Closing: Corpse Pose (Savasana)</p>
+                                            </div>
+                                        
+                                            <!-- Day 2: Core Strength -->
+                                            <div class="day">
+                                                <h2>Day 2: Core Strength</h2>
+                                                <p>Warm up with Sun Salutations</p>
+                                                <p>Core Poses and Balancing Poses</p>
+                                                <p>Closing: Child's Pose (Balasana), Savasana</p>
+                                            </div>
+                                        
+                                            <!-- Day 3: Balance and Flexibility -->
+                                            <div class="day">
+                                                <h2>Day 3: Balance and Flexibility</h2>
+                                                <p>Warm up with Sun Salutations</p>
+                                                <p>Balance and Flexibility Poses</p>
+                                                <p>Closing: Seated Forward Bend (Paschimottanasana), Savasana</p>
+                                            </div>
+                                        
+                                            <!-- Day 4: Relaxation and Restorative -->
+                                            <div class="day">
+                                                <h2>Day 4: Relaxation and Restorative</h2>
+                                                <p>Gentle warm-up and Restorative Poses</p>
+                                                <p>Breathing Exercises and Deep Relaxation</p>
+                                                <p>Closing: Extended Savasana</p>
+                                            </div>
+                                        
+                                            <!-- Day 5: Twists and Detoxification -->
+                                            <div class="day">
+                                                <h2>Day 5: Twists and Detoxification</h2>
+                                                <p>Begin with Sun Salutations</p>
+                                                <p>Twisting Poses and Detox Poses</p>
+                                                <p>Closing: Seated Meditation, Savasana</p>
+                                            </div>
+                                        
+                                            <!-- Day 6: Hip Openers -->
+                                            <div class="day">
+                                                <h2>Day 6: Hip Openers</h2>
+                                                <p>Warm up with Sun Salutations</p>
+                                                <p>Hip Opening Poses and Hamstring Stretches</p>
+                                                <p>Closing: Supine Bound Angle Pose (Supta Baddha Konasana), Savasana</p>
+                                            </div>
+                                        
+                                            <!-- Day 7: Full Body Flow -->
+                                            <div class="day">
+                                                <h2>Day 7: Full Body Flow</h2>
+                                                <p>Dynamic Flow Sequence incorporating poses from previous days</p>
+                                                <p>Closing: Final relaxation in Savasana</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                {% endif %}
+                            
+                            
+
+                            </tbody>
+
+							</form>
+						</table>
+
+						</div>												
+					</div>
+				</div>
+			</section>
+
+
+
+
+{% include 'footer.html' %}

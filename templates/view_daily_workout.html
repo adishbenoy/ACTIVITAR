@@ -1,0 +1,66 @@
+{% include 'user_header.html' %}
+
+   <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <!-- <h2>Classtime Table</h2> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">all class</li>
+                            <li data-tsfilter="crossfit">crossfit</li>
+                            <li data-tsfilter="lunge">lunge ball</li>
+                            <li data-tsfilter="ppsr">ppsr</li>
+                            <li data-tsfilter="walls">walls</li>
+                            <li data-tsfilter="candy">candy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            {%if val%}
+            <h1 style="color: #fff;">{{val}}</h1>
+            {%else%}
+            <div class="table">
+	<table border="2" align="center"  class="table" style="width: 1000px;color:#fff;">
+			<h3 align="center" style="color:#fff;"> Daily Workouts</h3>
+			<br><br>
+			<thead>
+                <th>Day</th>
+				<th>Duration</th>
+				<th>Workout Title</th>
+                <th>Description</th>
+                <th>Exercise</th>
+                <th>View Equipments</th>
+			</thead>
+			<tbody>
+				{% for row in ob%}
+				<tr>
+					<td>{{ row.day}}</td>
+                    <td>{{row.duration}}</td>
+                    <td>{{row.workout.title}}</td>
+                    <td>{{row.workout.description}}</td>
+                    <td><a href="/view_exercise/{{row.user_workout_id}}">Exercise</a></td>
+                    <td><a href="/view_equipments/{{row.workout.equipment_id}}">View Equipments</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+	</form>
+</table>
+            </div>
+            {%endif%}
+        </div>
+    </section>
+
+
+
+
+
+{% include 'footer.html' %}

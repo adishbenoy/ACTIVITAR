@@ -1,0 +1,65 @@
+{% include 'user_header.html' %}
+
+   <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                    </div>
+                </div>
+            </div>
+      
+          {%if ob1%}
+<table align="center" class="table table-striped">
+    <tr>
+        <th style="color: #fff;">Physician Name : {{ob1.physician.first_name}} {{ob1.physician.first_name}}</th>
+        <p  style="color: #fff;">Booked</p>
+        
+    </tr>
+
+
+</table>
+{%else%}
+            <div class="table">
+                <form action="" method="post">
+	<table border="2" align="center"  class="table" style="width: 1000px;color:#fff;">
+			<h3 align="center" style="color:#fff;"> Feedback</h3>
+			<br><br>
+
+                <tr>
+                    <th style="color: #fff;">Feedback : </th>
+                    <td><textarea name="feed" id="" cols="30" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" name="submit"></td>
+                </tr>
+            </table>
+
+</form>
+
+<table align="center">
+    <tr>
+        <th style="color: #fff;">Feedback</th>
+        <th style="color: #fff;">Date</th>
+        <th style="color: #fff;">Reply</th>
+    </tr>
+    {%for row in obj%}
+    <tr>
+        <td style="color: #fff;">{{row.feedback_desc}}</td>
+        <td style="color: #fff;">{{row.feedback_date}}</td>
+        <td style="color: #fff;">{{row.feedback_reply}}</td>
+    </tr>
+    {%endfor%}
+</table>
+
+            </div>
+
+        </div>
+        {%endif%}
+    </section>
+
+
+
+
+
+{% include 'footer.html' %} 

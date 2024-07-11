@@ -1,0 +1,64 @@
+{% include 'user_header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    table{
+        backdrop-filter:blur(5px);
+        font-size:20px;
+        color:white;
+    }
+    table th{
+        padding:25px;
+        color:yellow;
+    }
+    table td{
+        padding:15px;
+        color: #f4efef;
+    }
+    h3{
+        color: #f4efef;
+    }
+</style>
+</head>
+<body>
+    <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <!-- <h2>Classtime Table</h2> -->
+                    </div>
+                </div>
+            </div>
+    {% if orders_with_details %}
+<table align="center">
+    <tr>
+        <th style="color: white;">Product Name</th>
+        <th style="color: white;">Amount</th>
+        <th style="color: white;">Quantity</th>
+        <th style="color: white;">Total</th>
+    </tr>
+    {% for order in orders_with_details %}
+        {% for detail in order.orderdetails_set.all %}
+        <tr>
+            <td style="color: white;">{{ detail.product.product_name }}</td>
+            <td style="color: white;">{{ detail.amount }}</td>
+            <td style="color: white;">{{ detail.qty }}</td>
+            <td style="color: white;">{{ order.total }}</td>
+            <td ><a href="/view_payment/{{order.ordermaster_id}}/{{ detail.product.product_name }}/{{ detail.qty }}">View Payments</a></td>
+        </tr>
+        {% endfor %}
+    {% endfor %}
+</table>
+{% endif %}
+</div>
+</section>
+</body>
+</html>
+
+{% include 'footer.html' %}

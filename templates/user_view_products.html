@@ -1,0 +1,62 @@
+{% include 'user_header.html' %}
+
+   <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <!-- <h2>Classtime Table</h2> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">all class</li>
+                            <li data-tsfilter="crossfit">crossfit</li>
+                            <li data-tsfilter="lunge">lunge ball</li>
+                            <li data-tsfilter="ppsr">ppsr</li>
+                            <li data-tsfilter="walls">walls</li>
+                            <li data-tsfilter="candy">candy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="table">
+	<table border="2" align="center"  class="table" style="width: 1000px;color:#fff;">
+			<h3 align="center" style="color:#fff;"> Daily Workouts</h3>
+			<br><br>
+			<thead>
+                <th>Product Name</th>
+                <th>Amount</th>
+                <th>Shop</th>
+                
+			</thead>
+			<tbody>
+				{% for row in obj%}
+				<tr>
+					<td>{{ row.product_name}}</td>
+                    <td>{{row.amount}}</td>
+                    <td>{{row.shop.first_name}}</td>
+                    <td><a href="/user_booking/{{row.amount}}/{{row.product_id}}">Add to cart</a></td>
+                    <!-- <td><a href="/user_pay_product/{{row.amount}}">Make Payment</a></td> -->
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+	</form>
+</table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+{% include 'footer.html' %} 

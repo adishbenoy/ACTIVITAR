@@ -1,0 +1,89 @@
+{% include 'user_header.html' %}
+
+   <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <!-- <h2>Classtime Table</h2> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">all class</li>
+                            <li data-tsfilter="crossfit">crossfit</li>
+                            <li data-tsfilter="lunge">lunge ball</li>
+                            <li data-tsfilter="ppsr">ppsr</li>
+                            <li data-tsfilter="walls">walls</li>
+                            <li data-tsfilter="candy">candy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+          {%if ob1%}
+<table align="center" class="table table-striped">
+    <tr>
+        <th style="color: #fff;">Physician Name : {{ob1.physician.first_name}} {{ob1.physician.first_name}}</th>
+        <p  style="color: #fff;">Booked</p>
+
+        
+    </tr>
+</table>
+<br>
+<br>
+
+    <table align="center">
+        <h1 style="color: #fff;" align="center">Perks</h1>
+        <tr>
+            <th><a href="/view_diet_plan/{{ob1.physician_id}}" class="btn btn-warning">View Diet</a></th>
+            <th><a href="/user_send_messgae/{{ob1.physician_id}}" class="btn btn-danger">Send Message</a></th>
+        </tr>
+        <tr>
+            
+        </tr>
+    </table>
+
+
+</table>
+{%else%}
+            <div class="table">
+	<table border="2" align="center"  class="table" style="width: 1000px;color:#fff;">
+			<h3 align="center" style="color:#fff;"> Daily Workouts</h3>
+			<br><br>
+			<thead>
+                <th>Name</th>
+                <th>Qualification</th>
+                <th>Phone</th>
+                <th>Email</th>
+                
+			</thead>
+			<tbody>
+				{% for row in obj%}
+				<tr>
+					<td>{{ row.first_name}} {{ row.first_name}}</td>
+                    <td>{{row.qualification}}</td>
+                    <td>{{row.phone}}</td>
+                    <td>{{row.email}}</td>
+                    <td><a href="/book_physician/{{row.physician_id}}">Book</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+	</form>
+</table>
+
+            </div>
+
+        </div>
+        {%endif%}
+    </section>
+
+
+
+
+
+{% include 'footer.html' %} 

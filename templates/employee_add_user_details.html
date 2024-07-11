@@ -1,0 +1,82 @@
+{% include 'employee_header.html' %}
+
+
+    <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <!-- <h2>Classtime Table</h2> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">all class</li>
+                            <li data-tsfilter="crossfit">crossfit</li>
+                            <li data-tsfilter="lunge">lunge ball</li>
+                            <li data-tsfilter="ppsr">ppsr</li>
+                            <li data-tsfilter="walls">walls</li>
+                            <li data-tsfilter="candy">candy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="table">
+            				<form method="post">
+							<table align="center" border="2" class="table" style="width: 500px">
+							<h2 align="center" style="color: white;">USERS</h2>
+							<thead>
+								<tr>
+									<th style="color: white;">User Name</th>
+									<th style="color: white;">Age</th>
+									<th style="color: white;">Gender</th>
+									<th style="color: white;">Weight</th>
+									<th style="color: white;">Height</th>
+									<th style="color: white;">Phone</th>
+									<th style="color: white;">Email</th>
+									<th style="color: white;">Verify Status</th>
+									<th style="color: white;">Batch Name</th>
+									<th style="color: white;">Personal Workout</th>
+									<th style="color: white;">Attendence</th>
+									<th style="color: white;">View Predicted Workout</th>
+									<!-- <th style="color: white;">Equipment Workout</th> -->
+								</tr>
+							</thead>
+							<tbody>
+								{% for row in obj %}
+								<tr>
+									<td style="color: white;">{{row.first_name}} {{row.last_name}}</td>
+									<td style="color: white;">{{row.age}}</td>
+									<td style="color: white;">{{row.gender}}</td>
+									<td style="color: white;">{{row.weight}}</td>
+									<td style="color: white;">{{row.height}}</td>
+									<td style="color: white;">{{row.phone}}</td>
+									<td style="color: white;">{{row.email}}</td>
+								
+									{% if row.payment_status == "pending"%}
+									<td style="color: red;">payment not completed</td>
+									{% else %}
+									<td style="color: white;">{{row.payment_status}}</td>
+									
+									<td style="color: white;">{{row.batch.batch_name}}</td>
+									<td><a href="/employee_personalised_workout_details/{{row.user_id}}">Add</a></td>
+									<td><a href="/employee_add_attendence/{{row.user_id}}">Mark</a></td>
+									<td><a href="/employee_view_work/{{row.user_id}}">View</a></td>
+									{% endif %}
+
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</form>
+
+						</div>												
+					</div>
+				</div>
+			</section>
+
+
+{% include 'footer.html' %}

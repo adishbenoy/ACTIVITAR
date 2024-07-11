@@ -1,0 +1,38 @@
+{% include 'user_header.html' %}
+
+<section class="classtime-section class-time-table spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                </div>
+            </div>
+        </div>
+      
+        <div class="table">
+	<form method="post">
+		<table class="table table-striped">
+            <tr>
+                <th style="color: white;">Amount</th>
+
+                <td><input type="text" name="amt" value="{{amt}}" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><a href="card/{{amt}}">Pay Now</a></td>
+                <!-- <td colspan="2" align="center"><input type="submit" name="submit" value="Pay" class="btn btn-danger"></td> -->
+            </tr>
+        </table>
+	</form>
+</center>
+</div>
+</div>
+</section>
+						
+		
+
+                
+
+
+
+
+{% include 'footer.html' %}
